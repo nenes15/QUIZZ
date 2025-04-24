@@ -24,21 +24,23 @@ body {
     transition: .3s ease;
 }
 
-/* .main.active {
+/* pour le fond transparence du popup */
+ .main.active {
     filter: blur(15px);
     pointer-events: none;
-} */
+} 
 
-/* Conteneur principal contenant deux sections : home et quiz. Largeur = 200% pour faire une sorte de "slide" */
+/* Conteneur principal contenant deux sections : home et quiz. */
 .container {
     display: flex;
     height: 100vh;
     width: 200%;
 }
 
+/* Section d'accueil centrée à l'écran */
 .home {
     position: relative;
-    left: -50%;
+    left: -50%; /* Pour montrer la section de droite au début */
     /* height: 100vh; */
     width: 100%;
     display: flex;
@@ -46,6 +48,7 @@ body {
     align-items: center;
 }
 
+/* Contenu centré dans la page d'accueil */
 .home-content {
     max-width: 600px;
     display: flex;
@@ -53,12 +56,14 @@ body {
     flex-direction: column;
 }
 
+/* Titre principal de l'accueil */
 .home-content h1 {
     font-size: 78px;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
+/* Texte sous le titre */
 .home-content p {
     font-size: 16px;
     text-align: center;
@@ -66,6 +71,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Bouton "Commencer" */
 .home-content .start-btn {
     width: 200px;
     height: 55px;
@@ -82,11 +88,13 @@ body {
     transition: .5s;
 }
 
+/* Effet au survol du bouton */
 .home-content .start-btn:hover {
     background: #09001d;
     box-shadow: none;
 }
 
+/* Boîte d'information qui s'affiche en popup */
 .popup-info {
     position: absolute;
     top: 50%;
@@ -101,17 +109,20 @@ body {
     transition: .3s ease;
 }
 
+/* Activation de la popup */
 .popup-info.active {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* Titre de la popup */
 .popup-info h2 {
     font-size: 50px;
     color: #c40094;
 }
 
+/* Chaque ligne d'information dans la popup */
 .popup-info .info {
     display: inline-block;
     font-size: 16px;
@@ -120,6 +131,7 @@ body {
     margin: 4px 0;
 }
 
+/* Groupe de boutons dans la popup */
 .popup-info .btn-group {
     display: flex;
     justify-content: space-between;
@@ -129,6 +141,7 @@ body {
     padding: 15px 0 7px;
 }
 
+/* Boutons de la popup */
 .popup-info .btn-group .info-btn {
     display: inline-flex;
     justify-content: center;
@@ -148,21 +161,25 @@ body {
     transition: .5s;
 }
 
+/* Premier bouton : fond transparent, bord rose */
 .popup-info .btn-group .info-btn:nth-child(1) {
     background: transparent;
     color: #c40094;
 }
 
+/* Effet hover sur le premier bouton */
 .popup-info .btn-group .info-btn:nth-child(1):hover {
     background: #c40094;
     color: #fff;
 }
 
+/* Effet hover sur le deuxième bouton */
 .popup-info .btn-group .info-btn:nth-child(2):hover {
     background: #950170;
     border-color: #950170;
 }
 
+/* Section du quiz : se déplace pour apparaître quand on passe à la partie quiz */
 .quiz-section {
     position: relative;
     left: -50%;
@@ -171,16 +188,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 100; /* indique l'element sera afficher au-dessus*/
     transition: .8s ease-in-out;
     transition-delay: .25s;
     
 }
 
+/* Activation de la section quiz */
 .quiz-section.active {
     left: 0;
 }
 
+/* Boîte du quiz (questions, réponses) */
 .quiz-section .quiz-box {
     position: relative;
     width: 500px;
@@ -197,6 +216,7 @@ body {
     transition-delay: 0s;
 }
 
+/* Activation de la boîte quiz */
 .quiz-section .quiz-box.active {
     opacity: 1;
     pointer-events: auto;
@@ -205,6 +225,7 @@ body {
     transition-delay: 1s;
 }
 
+/* Titre du quiz */
 .quiz-box h1 {
     font-size: 32px;
     text-align: center;
@@ -212,6 +233,7 @@ body {
     border-radius: 6px;
 }
 
+/* En-tête du quiz avec score */
 .quiz-box .quiz-header {
     display: flex;
     justify-content: space-between;
@@ -232,11 +254,13 @@ body {
     padding: 7px;
 }
 
+/* Texte de la question */
 .quiz-box .question-text {
     font-size: 24px;
     font-weight: 600;
 }
 
+/* Liste des options de réponse */
 .option-list .option {
     width: 100%;
     padding: 12px;
@@ -249,27 +273,32 @@ body {
     transition: .3s;
 }
 
+/* Effet hover sur une option */
 .option-list .option:hover {
     background: rgba( 255,  255,  255, .1);
     border-color: rgba( 255,  255,  255, .1);
 }
 
+/* Option correcte : fond vert */
 .option-list .option.correct {
     background: #09001d;
     color: #00a63d;
     border-color: #00a63d;
 }
 
+/* Option incorrecte : fond rouge */
 .option-list .option.incorrect {
     background: #09001d;
     color: #a60045;
     border-color: #a60045;
 }
 
+/* Désactive le clic sur les options */
 .option-list .option.disabled {
     pointer-events: none;
 }
 
+/* Pied de page du quiz (question X sur Y, bouton Suivant) */
 .quiz-box .quiz-footer {
     display: flex;
     justify-content: space-between;
@@ -284,6 +313,7 @@ body {
     font-weight: 600;
 }
 
+/* Bouton suivant : inactif au départ */
 .quiz-footer .next-btn {
     width: 100px;
     height: 45px;
@@ -299,6 +329,7 @@ body {
     transition: .5s;
 }
 
+/* Quand il est actif, le bouton devient rose */
 .quiz-footer .next-btn.active {
     pointer-events: auto;
     background: #c40094;
@@ -306,11 +337,13 @@ body {
     color: #fff;
 }
 
+/* Effet hover du bouton actif */
 .quiz-footer .next-btn.active:hover {
     background: #950170;
     border-color: #950170;
 }
 
+/* Boîte des résultats affichée à la fin */
 .quiz-section .result-box {
     position: absolute;
     top: 50%;
@@ -329,16 +362,19 @@ body {
     transition: .3s ease;
 }
 
+/* Activation de la boîte de résultats */
 .quiz-section .result-box.active {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* Titre "Résultat" */
 .result-box h2 {
     font-size: 52px;
 }
 
+/* Conteneur du cercle de score en % */
 .result-box .percentage-container {
     width: 300px;
     display: flex;
@@ -347,6 +383,7 @@ body {
     margin: 20px 0 40px;
 }
 
+/* Cercle de progression (score) */
 .percentage-container .circular-progress {
     position: relative;
     width: 250px;
@@ -358,71 +395,82 @@ body {
     align-items: center;
 }
 
+/* Style de l’élément circulaire en arrière-plan du graphique de progression */
 .percentage-container .circular-progress::before {
-    content: '';
-    position: absolute;
+    content: ''; /* Crée un pseudo-élément vide */
+    position: absolute; 
     width: 210px;
     height: 210px;
-    background: #09001d;
-    border-radius: 50%;
+    background: #09001d; 
+    border-radius: 50%; 
 }
 
+/* Style du texte affichant la valeur du pourcentage dans le cercle */
 .circular-progress .progress-value {
-    position: relative;
-    font-size: 45px;
-    font-weight: 600;
+    position: relative; 
+    font-size: 45px; 
+    font-weight: 600; 
 }
 
+/* Style du texte affichant le score total (ex. "Ton score est...") */
 .percentage-container .score-text {
     font-size: 26px;
-    font-weight: 600;
-    margin-top: 20px;
+    font-weight: 600; /* Texte en semi-gras */
+    margin-top: 20px; /* Espacement au-dessus de ce texte */
 }
 
+/* Conteneur des boutons dans la boîte de résultat */
 .result-box .buttons {
-    display: flex;
+    display: flex; 
 }
 
+/* Style général des boutons */
 .buttons button {
     width: 130px;
     height: 45px;
-    background: #c40094;
-    border: 2px solid #c40094;
-    outline: none;
-    border-radius: 6px;
+    background: #c40094; 
+    border: 2px solid #c40094; 
+    outline: none; /* Supprime le contour par défaut au focus */
+    border-radius: 6px; 
     font-size: 16px;
-    color: #fff;
+    color: #fff; 
     font-weight: 600;
-    margin: 0 20px 20px;
-    cursor: pointer;
-    transition: .5s;
+    margin: 0 20px 20px; /* Marge droite et bas */
+    cursor: pointer; 
+    transition: .5s; /* Animation fluide lors du hover */
 }
 
+/* Style spécifique au premier bouton lorsqu’on le survole */
 .buttons button:nth-child(1):hover {
-    background: #950170;
-    border-color: #950170;
+    background: #950170; 
+    border-color: #950170; 
 }
 
+/* Style du deuxième bouton (généralement un bouton "Quitter" ou "Retour") */
 .buttons button:nth-child(2) {
-    background: transparent;
-    color: #c40094;
+    background: transparent; 
+    color: #c40094; 
 }
 
+/* Style du deuxième bouton lors du survol */
 .buttons button:nth-child(2):hover {
-    background: #c40094;
-    color: #fff;
+    background: #c40094; 
+    color: #fff; 
 }
 
-
+/* SECTION RESPONSIVE POUR LES PETITS ÉCRANS (max-width = 768px) */
 @media (max-width: 768px) {
+    /* Réduction de la taille du titre principal sur mobile */
     .home-content h1 {
         font-size: 48px;
     }
 
+    /* Redimensionnement des boîtes principales pour mieux s’adapter aux écrans mobiles */
     .popup-info, .quiz-box, .result-box {
-        width: 90%;
+        width: 90%; /* Prend presque toute la largeur disponible */
     }
 
+    /* Redimensionne le cercle de progression sur mobile */
     .percentage-container .circular-progress {
         width: 200px;
         height: 200px;

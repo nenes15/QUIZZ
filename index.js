@@ -123,3 +123,80 @@ quiz();
 .navbar a.active {
     color: #c40094;
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Déclaration d'un tableau contenant toutes les questions du quiz
+let questions = [
+  {
+      // Numéro de la question (utile pour l'affichage)
+      numb: 1,
+      // Texte de la question
+      question: "Qui est le créateur de Facebook ?",
+      // Bonne réponse à cette question
+      answer: "D. Mark Zuckerberg",
+      // Liste des choix de réponses disponibles
+      options: [
+          "A. Elon Musk",
+          "B. Bill Gates",
+          "C. Jeff Bezos",
+          "D. Mark Zuckerberg"
+      ]
+  },
+  {
+      numb: 2,
+      question: "Que signifie l’acronyme URL ?",
+      answer: "A. Uniform Resource Locator",
+      options: [
+          "A. Uniform Resource Locator", // bonne réponse
+          "B. Universal Router Link",
+          "C. United Reference List",
+          "D. User Response Log"
+      ]
+  },
+  {
+      numb: 3,
+      question: "Que signifie Wi-Fi ?",
+      answer: "C. Wireless Fidelity",
+      options: [
+          "A. Wireless Fiber",
+          "B. Worldwide Internet Field",
+          "C. Wireless Fidelity", // bonne réponse
+          "D. Wave Frequency"
+      ]
+  },
+  {
+      numb: 4,
+      question: "Quel navigateur est représenté par une icône en forme de boussole bleue ?",
+      answer: "C. Safari",
+      options: [
+          "A. Chrome",
+          "B. Edge",
+          "C. Safari", // bonne réponse
+          "D. Firefox"
+      ]
+  },
+  {
+      numb: 5,
+      question: "Quel est le rôle d’un pare-feu (firewall) dans un système informatique ?",
+      answer: "B. Filtrer le trafic réseau pour protéger des intrusions",
+      options: [
+          "A. Éteindre l’ordinateur en cas de surchauffe",
+          "B. Filtrer le trafic réseau pour protéger des intrusions", // bonne réponse
+          "C. Accélérer le téléchargement des fichiers",
+          "D. Optimiser les vidéos en streaming"
+      ]
+  }
+];
