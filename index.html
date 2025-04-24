@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QUIZZ</title>
+</head>
+<body>
+
+<!-- Début du corps du site -->
+
+    <main class="main">
+        
+        <!-- Conteneur principal -->
+        <div class="container">
+
+            <!-- Section qui contiendra le quiz -->
+            <section class="quiz-section">
+
+                <!-- Boîte contenant la question et les options -->
+                <div class="quiz-box">
+
+                    <!-- Titre principal du quiz -->
+                    <h1>Le Grand Quiz du Savoir</h1>
+
+                    <!-- En-tête de la boîte de quiz (titre secondaire + score) -->
+                    <div class="quiz-header">
+                        <span>Défi Cérébral</span>
+                        <span class="header-score">Score: 0 / 5</span>
+                        <!-- Affichage du score actuel (statique ici) -->
+                    </div>
+
+                    <!-- Question affichée -->
+                    <h2 class="question-text">Qui est le créateur de Facebook ?</h2>
+
+                    <div class="option-list">
+                        <!-- <div class="option">
+                            <span>A. Elon Musk</span>
+                        </div>
+                        <div class="option">
+                            <span>B. Bill Gates</span>
+                        </div>
+                        <div class="option">
+                            <span>C. Jeff Bezos</span>
+                        </div>
+                        <div class="option">
+                            <span>D. Mark Zuckerberg</span>
+                        </div> -->
+                    </div>
+
+                    <div class="quiz-footer">
+                        <!-- Pied du quiz avec le nombre de questions + bouton suivant -->
+                        <span class="question-total">1 sur 5 Questions</span>
+                        <button class="next-btn">Suivant</button>
+                    </div>
+                </div>
+
+                <!-- Boîte de résultat qui s'affiche à la fin du quiz -->
+                <div class="result-box">
+                    <h2>Résultat du Quiz !</h2>
+
+                    <!-- Cercle avec le pourcentage de réussite -->
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+
+                        <span class="score-text">Ton score : 0 sur 5</span>
+                    </div>
+
+                    <div class="buttons">
+                        <!-- Boutons pour recommencer ou revenir à l'accueil -->
+                        <button class="tryAgain-btn">Réessayer</button>
+                        <button class="goHome-btn">Revenir à l’accueil</button>
+                    </div>
+                </div>
+            </section> 
+
+             <!-- Section d’accueil avant de commencer le quiz -->
+            <section class="home">
+                <div class="home-content">
+                    <h1>Quiz</h1>
+
+                    <!-- Texte motivant -->
+                    <p>Le savoir, c’est ton super-pouvoir. Prêt à l’activer ?</p>
+                    <!-- Bouton pour lancer le quiz -->
+                    <button class="start-btn">Commencer le Quiz</button>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+
+    <div class="popup-info">
+        <!-- Popup d’information sur le fonctionnement du quiz -->
+        <h2>Guide du Quiz</h2>
+        <!-- Liste des règles ou conseils -->
+        <span class="info">1. Ce quiz contient 5 questions à choix multiples.</span>
+        <span class="info">2. Chaque question n’a qu’une seule bonne réponse.</span>
+        <span class="info">3. Tu gagnes 1 point par bonne réponse.</span>
+        <span class="info">4. Tu verras ton score à la fin du quiz.</span>
+        <span class="info">5. Tu peux recommencer autant de fois que tu veux pour t’améliorer !</span>
+
+        <div class="btn-group">
+            <!-- Boutons de la popup -->
+            <button class="info-btn exit-btn">Quitter le Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continuer</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+</body>
+</html>
